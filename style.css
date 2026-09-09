@@ -1,0 +1,421 @@
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #111111;
+
+    font-family:
+        "Courier New",
+        Consolas,
+        monospace;
+
+    color: #eeeeee;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   EDITOR
+========================= */
+
+.editor {
+    width: min(1000px, 100%);
+
+    background: #181818;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+
+    border: 1px solid #303030;
+}
+
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.barra-editor {
+    height: 42px;
+
+    background: #222222;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    position: relative;
+}
+
+
+/* Botones tipo Mac */
+
+.circulo {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    margin-right: 7px;
+}
+
+.rojo {
+    background: #ff5f57;
+}
+
+.amarillo {
+    background: #febc2e;
+}
+
+.verde {
+    background: #28c840;
+}
+
+
+.nombre-archivo {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #bdbdbd;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido {
+    padding: 28px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    overflow-x: auto;
+}
+
+
+/* =========================
+   COLORES DEL CÓDIGO
+========================= */
+
+.comentario {
+    color: #777777;
+}
+
+.azul {
+    color: #569cd6;
+}
+
+.verde-texto {
+    color: #6a9955;
+}
+
+.numero {
+    color: #b5cea8;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+#botonEmpezar {
+    background: #252525;
+
+    color: #ffffff;
+
+    border: 1px solid #555555;
+
+    padding: 8px 16px;
+
+    border-radius: 5px;
+
+    font-family:
+        "Courier New",
+        Consolas,
+        monospace;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#botonEmpezar:hover {
+    background: #333333;
+
+    border-color: #888888;
+}
+
+#botonEmpezar:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   OCULTO
+========================= */
+
+.oculto {
+    display: none !important;
+}
+
+
+/* =========================
+   INDENTACIÓN
+========================= */
+
+.indentado {
+    padding-left: 35px;
+}
+
+
+/* =========================
+   ESTADO
+========================= */
+
+.estado {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #999999;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   BARRA DE PROGRESO
+========================= */
+
+.barra-progreso {
+    width: 100%;
+
+    height: 8px;
+
+    background: #292929;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    margin-top: 8px;
+}
+
+.progreso {
+    width: 0%;
+
+    height: 100%;
+
+    background: #8a8a8a;
+
+    transition: width 0.05s linear;
+}
+
+
+/* =========================
+   ZONA DE LOS TE AMO
+========================= */
+
+#corazon {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(12, minmax(0, 1fr));
+
+    grid-auto-rows: 32px;
+
+    column-gap: 20px;
+
+    row-gap: 10px;
+
+    justify-items: center;
+
+    align-items: center;
+
+    overflow: visible;
+
+}
+
+
+/* Cada "te amo" */
+
+.te-amo {
+
+    color: #dddddd;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    animation: aparecer 0.15s forwards;
+}
+
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================
+   MENSAJE TERMINADO
+========================= */
+
+.mensaje-terminado {
+
+    margin-top: 25px;
+
+    color: #aaaaaa;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   TERMINAL FINAL
+========================= */
+
+.terminal-final {
+
+    margin-top: 15px;
+
+    padding-top: 10px;
+}
+
+
+.linea-comando {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 5px;
+}
+
+
+.prompt {
+    color: #aaaaaa;
+
+    font-size: 15px;
+}
+
+
+#comando {
+
+    width: 30px;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: #eeeeee;
+
+    font-family:
+        "Courier New",
+        Consolas,
+        monospace;
+
+    font-size: 15px;
+
+    caret-color: #eeeeee;
+}
+
+
+.error-comando {
+
+    color: #777777;
+
+    font-size: 12px;
+
+    min-height: 20px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 8px;
+    }
+
+    .contenido {
+        padding: 20px 15px;
+
+        font-size: 13px;
+    }
+
+    #corazon {
+
+        grid-template-columns:
+            repeat(6, minmax(0, 1fr));
+
+        grid-auto-rows: 24px;
+
+        column-gap: 3px;
+
+        padding: 10px 0;
+    }
+
+    .te-amo {
+        font-size: 11px;
+    }
+
+    .indentado {
+        padding-left: 20px;
+    }
+
+    .estado {
+        font-size: 11px;
+    }
+
+}

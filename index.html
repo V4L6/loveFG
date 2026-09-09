@@ -1,0 +1,182 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>love.js</title>
+
+    <link rel="stylesheet" href=  "C:\Users\valgu\OneDrive\Documentos\12\style.css">
+</head>
+
+<body>
+
+    <div class="editor">
+
+        <!-- Barra superior -->
+        <div class="barra-editor">
+            <div class="circulo rojo"></div>
+            <div class="circulo amarillo"></div>
+            <div class="circulo verde"></div>
+
+            <span class="nombre-archivo">
+                love.js
+            </span>
+        </div>
+
+
+        <!-- Contenido de la terminal -->
+        <div class="contenido">
+
+            <!-- INICIO -->
+            <div id="inicio">
+
+                <div class="comentario">
+                    // una pequeña demostración...
+                </div>
+
+                <br>
+
+                <div>
+                    <span class="azul">const</span>
+                    mensaje =
+                    <span class="verde-texto">
+                        "Te voy a decir que te amo"
+                    </span>;
+                </div>
+
+                <div>
+                    <span class="azul">const</span>
+                    veces =
+                    <span class="numero">1000</span>;
+                </div>
+
+                <br>
+
+                <div class="comentario">
+                    // ¿A ver...?
+                </div>
+
+                <br>
+
+                <button id="botonEmpezar">
+                    A ver ♥
+                </button>
+
+            </div>
+
+
+            <!-- PROGRAMA -->
+            <div id="programa" class="oculto">
+
+                <div>
+                    <span class="azul">const</span>
+                    amor =
+                    <span class="verde-texto">
+                        "infinito"
+                    </span>;
+                </div>
+
+                <br>
+
+                <div>
+                    <span class="azul">for</span>
+                    (let i = <span class="numero">0</span>;
+                    i &lt; <span class="numero">1000</span>;
+                    i++) {
+                </div>
+
+                <div class="indentado">
+
+                    decir(
+                    <span class="verde-texto">
+                        "te amo "
+                    </span>
+                    );
+
+                </div>
+
+                <div>
+                    }
+                </div>
+
+                <br>
+
+                <!-- Estado -->
+                <div class="estado">
+
+                    <span id="estadoTexto">
+                        Ejecutando...
+                    </span>
+
+                    <span id="contador">
+                        0 / 1000
+                    </span>
+
+                </div>
+
+
+                <!-- Barra de progreso -->
+                <div class="barra-progreso">
+                    <div
+                        id="progreso"
+                        class="progreso">
+                    </div>
+                </div>
+
+
+                <!-- Aquí aparecen los 1000 te amo -->
+                <div id="corazon"></div>
+
+
+                <!-- Se muestra después de que termina -->
+                <div
+                    id="mensajeTerminado"
+                    class="mensaje-terminado oculto">
+
+                    Proceso terminado ♥
+                    
+                </div>
+
+
+                <!-- Terminal para escribir x -->
+                <div
+                    id="terminalFinal"
+                    class="terminal-final oculto">
+
+                    <div class="comentario">
+                        // escribe el comando "x" para volver a empezar
+                    </div>
+
+                    <div class="linea-comando">
+
+                        <span class="prompt">&gt;</span>
+
+                        <input
+                            type="text"
+                            id="comando"
+                            autocomplete="off"
+                            spellcheck="false"
+                            maxlength="1"
+                        >
+
+                    </div>
+
+                    <div
+                        id="errorComando"
+                        class="error-comando">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src= "C:\Users\valgu\OneDrive\Documentos\12\script.js" ></script>
+
+</body>
+</html>
